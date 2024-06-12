@@ -1117,6 +1117,7 @@ footer .content .buttons .button2 img {
   width: 30px;
   height: 30px;
   z-index: 2;
+  animation: rotate1 3s infinite 1s linear;
 }
 
 .ix img {
