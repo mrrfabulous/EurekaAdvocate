@@ -32,65 +32,137 @@ document.addEventListener("DOMContentLoaded", () => {
   const card1 = document.getElementById("card-1");
   const card2 = document.getElementById("card-2");
   const card3 = document.getElementById("card-3");
-const card4 = document.getElementById("card-4");
-cards.forEach((card) => {
-  card.classList.add("row-2");
-})
-// card 1
-card1.addEventListener("mouseover", () => {
-  card4.classList.remove("row-2");
-  card4.querySelector("img").style.visibility = "hidden";
-  card1.querySelector(".paragraph").style.visibility = "visible";
-  card1.classList.add("row-3");
-})
-card1.addEventListener("mouseout", () => {
-  card4.classList.add("row-2")
-  card4.querySelector("img").style.visibility = "visible";
-  card1.classList.remove("row-3");
-  card1.querySelector(".paragraph").style.visibility = "hidden";
+  const card4 = document.getElementById("card-4");
+
+  cards.forEach((card) => {
+      card.classList.add("row-2");
+    })
+
+    
+    if (window.innerWidth > 800) {
+    // card 1
+    card1.addEventListener("mouseover", () => {
+      card4.classList.remove("row-2");
+      card4.querySelector("img").style.visibility = "hidden";
+      card1.querySelector(".paragraph").style.visibility = "visible";
+      card1.classList.add("row-3");
+    })
+    card1.addEventListener("mouseout", () => {
+      card4.classList.add("row-2")
+      card4.querySelector("img").style.visibility = "visible";
+      card1.classList.remove("row-3");
+      card1.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 2
+    card2.addEventListener("mouseover", () => {
+      card4.classList.remove("row-2");
+      card4.querySelector("img").style.visibility = "hidden";
+      card2.classList.add("row-3");
+      card2.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card2.addEventListener("mouseout", () => {
+      card4.classList.add("row-2")
+      card4.querySelector("img").style.visibility = "visible";
+      card2.classList.remove("row-3");
+      card2.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 3
+    card3.addEventListener("mouseover", () => {
+      card1.classList.remove("row-2");
+      card1.querySelector("img").style.visibility = "hidden";
+      card3.classList.add("row-3");
+      card3.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card3.addEventListener("mouseout", () => {
+      card1.classList.add("row-2")
+      card1.querySelector("img").style.visibility = "visible";
+      card3.classList.remove("row-3");
+      card33.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 4
+    card4.addEventListener("mouseover", () => {
+      card2.classList.remove("row-2");
+      card2.querySelector("img").style.visibility = "hidden";
+      card3.classList.add("row-3");
+      card3.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card4.addEventListener("mouseout", () => {
+      card3.classList.remove("row-3");
+      card2.classList.add("row-2")
+      card2.querySelector("img").style.visibility = "visible";
+      card3.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+  }
+
+  window.addEventListener("resize", () => {    
+    if (window.innerWidth > 640) {
+    // card 1
+    card1.addEventListener("mouseover", () => {
+      card4.classList.remove("row-2");
+      card4.querySelector("img").style.visibility = "hidden";
+      card1.querySelector(".paragraph").style.visibility = "visible";
+      card1.classList.add("row-3");
+    })
+    card1.addEventListener("mouseout", () => {
+      card4.classList.add("row-2")
+      card4.querySelector("img").style.visibility = "visible";
+      card1.classList.remove("row-3");
+      card1.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 2
+    card2.addEventListener("mouseover", () => {
+      card4.classList.remove("row-2");
+      card4.querySelector("img").style.visibility = "hidden";
+      card2.classList.add("row-3");
+      card2.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card2.addEventListener("mouseout", () => {
+      card4.classList.add("row-2")
+      card4.querySelector("img").style.visibility = "visible";
+      card2.classList.remove("row-3");
+      card2.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 3
+    card3.addEventListener("mouseover", () => {
+      card1.classList.remove("row-2");
+      card1.querySelector("img").style.visibility = "hidden";
+      card3.classList.add("row-3");
+      card3.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card3.addEventListener("mouseout", () => {
+      card1.classList.add("row-2")
+      card1.querySelector("img").style.visibility = "visible";
+      card3.classList.remove("row-3");
+      card33.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+    // card 4
+    card4.addEventListener("mouseover", () => {
+      card2.classList.remove("row-2");
+      card2.querySelector("img").style.visibility = "hidden";
+      card3.classList.add("row-3");
+      card3.querySelector(".paragraph").style.visibility = "visible";
+    })
+    card4.addEventListener("mouseout", () => {
+      card3.classList.remove("row-3");
+      card2.classList.add("row-2")
+      card2.querySelector("img").style.visibility = "visible";
+      card3.querySelector(".paragraph").style.visibility = "hidden";
+    })
+
+  }
+console.log("window resize, please refresh page")
+
 })
 
-// card 2
-card2.addEventListener("mouseover", () => {
-  card4.classList.remove("row-2");
-  card4.querySelector("img").style.visibility = "hidden";
-  card2.classList.add("row-3");
-  card2.querySelector(".paragraph").style.visibility = "visible";
-})
-card2.addEventListener("mouseout", () => {
-  card4.classList.add("row-2")
-  card4.querySelector("img").style.visibility = "visible";
-  card2.classList.remove("row-3");
-  card2.querySelector(".paragraph").style.visibility = "hidden";
-})
 
-// card 3
-card3.addEventListener("mouseover", () => {
-  card1.classList.remove("row-2");
-  card1.querySelector("img").style.visibility = "hidden";
-  card3.classList.add("row-3");
-  card3.querySelector(".paragraph").style.visibility = "visible";
-})
-card3.addEventListener("mouseout", () => {
-  card1.classList.add("row-2")
-  card1.querySelector("img").style.visibility = "visible";
-  card3.classList.remove("row-3");
-  card33.querySelector(".paragraph").style.visibility = "hidden";
-})
-
-// card 4
-card4.addEventListener("mouseover", () => {
-  card2.classList.remove("row-2");
-  card2.querySelector("img").style.visibility = "hidden";
-  card3.classList.add("row-3");
-  card3.querySelector(".paragraph").style.visibility = "visible";
-})
-card4.addEventListener("mouseout", () => {
-  card3.classList.remove("row-3");
-  card2.classList.add("row-2")
-  card2.querySelector("img").style.visibility = "visible";
-  card3.querySelector(".paragraph").style.visibility = "hidden";
-})
+  }
 
 
   // cards.forEach((card) => {
@@ -151,4 +223,5 @@ card4.addEventListener("mouseout", () => {
   //   //   oppositeCard.querySelector("img").style.visibility = "visible";
   //   // });
   // });
-});
+
+);
